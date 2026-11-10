@@ -1,0 +1,287 @@
+/* 1. BOX MODEL: box-sizing so padding/border are included in element width,
+   plus an explicit border/padding/margin on .container to show content,
+   padding, border, and margin working together. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma;
+    font-size: medium;
+    text-align: center;
+    background-color: #3f1616;
+    margin: 0;
+    padding: 20px;
+    background-image: url('green.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+:root {
+    --box-bg: #eeeaea;
+    --box-border: #cfae8f;
+    --box-text: #222;
+    --table-bg: #ddb0b0;
+    --table-border: #180f0f;
+    --th-bg: #333;
+    --th-text: #fff;
+    --row-alt-bg: #f2f2f2;
+    --input-bg: #fff;
+    --input-border: #ccc;
+}
+
+body.dark-mode {
+    --box-bg: #1e1e1e;
+    --box-border: #555;
+    --box-text: #e4e4e4;
+    --table-bg: #2a2a2a;
+    --table-border: #555;
+    --th-bg: #111;
+    --th-text: #f0f0f0;
+    --row-alt-bg: #272727;
+    --input-bg: #2c2c2c;
+    --input-border: #555;
+}
+
+.container {
+    background-color: var(--box-bg);
+    color: var(--box-text);
+    border: 2px solid var(--box-border);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    /* 3. ANIMATION: containers fade/slide in on page load */
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.ios-toggle {
+    display: block;
+    width: 64px;
+    height: 34px;
+    margin: 10px auto 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.ios-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-track {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #e9e9ea;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.ios-toggle input:checked + .toggle-track {
+    background-color: #1c1c1e;
+    border-color: #1c1c1e;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    line-height: 1;
+    color: #555;
+}
+
+.toggle-icon.sun {
+    left: 7px;
+}
+
+.toggle-icon.moon {
+    right: 7px;
+    color: #ccc;
+}
+
+.toggle-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.ios-toggle input:checked ~ .toggle-knob {
+    transform: translateX(30px);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #e58e8e;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #2d65a0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Profile & Image */
+.img-container {
+    text-align: center;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+
+}
+
+img.dog-img {
+    outline-style: dashed;
+    outline-color: #555;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* List Styling */
+ul.project-list {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+ul.project-list li {
+    margin-bottom: 12px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: var(--table-bg);
+}
+
+th, td {
+    border: 1px solid var(--table-border);
+    padding: 10px 14px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--th-bg);
+    color: var(--th-text);
+}
+
+tr:nth-child(even) {
+    background-color: var(--row-alt-bg);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--box-text);
+    box-sizing: border-box;
+    font-family: verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 150px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+button {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* 3. ANIMATION: keyframes used by .container above */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. MEDIA QUERY: adjust layout for small/mobile screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    img.dog-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

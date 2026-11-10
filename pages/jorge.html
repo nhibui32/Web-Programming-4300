@@ -2,10 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Morin</title>
+    <title>Jorge Personal Website</title>
+    <link rel="stylesheet" href="jorge.css">
 </head>
 <body>
-    
+
+    <canvas id="particle-canvas"></canvas>
+
+    <h1>Jorge Morin</h1>
+
+    <label class="ios-toggle">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="toggle-track">
+            <span class="toggle-icon sun">☀</span>
+            <span class="toggle-icon moon">☾</span>
+        </span>
+        <span class="toggle-knob"></span>
+    </label>
+
+    <!-- Bio Section -->
+    <div class="container">
+        <p>
+            This is my personal website! I am a senior Computer Science student who spends most of my waking hours fueled by coffee and 
+            turning fresh ideas into working software.
+            My favorite things to do are hiking, reading, and programming—though figuring out complex problems is half the fun, 
+            which always keeps life interesting.
+        </p>
+        <p>
+            In my free time, when I am taking a break from screen time, 
+            I love kicking back with video games, catching up on the latest movies, or exploring new creative hobbies. 
+            I also like to spend time with my dog, Zachary. I am always trying my best to learn new skills, 
+            pick up modern frameworks, and stay curious about web development and emerging technologies.
+        </p>
+        <p>
+            I am also a massive sports fan and love watching football. 
+            Right now, I am following the early rounds of the UEFA Champions League. 
+            While there are plenty of fun teams to watch like AC Milan, Liverpool and Bayern Munich, my heart belongs to Real Madrid. 
+            They are my absolute favorite team, and I am fully expecting them to bring home the Champions League trophy again this year!
+        </p> 
+        <p style="text-align: center;">
+            If you wish to explore my professional background, you can view my 
+            <a href="https://www.linkedin.com/in/jorge-morin-460037368/" target="_blank">LinkedIn Profile</a>.
+        </p>
+    </div>
+
+    <!-- Dog Section -->
+    <div class="container img-container">
+        <h2>My Companion</h2>
+        <p>This is my dog—he is a Yorkie named Zachary! He likes to bark for food and attention. 
+           Although he can be stubborn at times, he is a loyal and loving companion.</p>
+        <img class="dog-img" src="../img/jorge-dog.png" alt="Zachary, the yorkie">
+    </div>
+
+    <!-- 1. LIST SECTION: Projects -->
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <ul class="project-list">
+            <li><strong>K-Means Clustering Engine:</strong> A C++ implementation of machine learning data-clustering algorithms designed to analyze coordinate datasets.</li>
+            <li><strong>Calculus II Study Assistant:</strong> Instructional web tools and structured exercises designed to assist undergrads with advanced integration and series techniques.</li>
+            <li><strong>Personal Portfolio Website:</strong> A responsive web project showcasing technical proficiencies, personal projects, and interactive contact forms.</li>
+        </ul>
+    </div>
+
+    <!-- 2. TABLE SECTION: Technical Skills -->
+    <div class="container">
+        <h2>Programming Languages & Technologies</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Language / Tool</th>
+                    <th>Proficiency</th>
+                    <th>Primary Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>C++</td>
+                    <td>Advanced</td>
+                    <td>Algorithms, Data Structures, Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Intermediate</td>
+                    <td>Scripting, Data Analysis, Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>SQL</td>
+                    <td>Intermediate</td>
+                    <td>Database Management & Queries</td>
+                </tr>
+                <tr>
+                    <td>HTML / CSS / JavaScript</td>
+                    <td>Intermediate</td>
+                    <td>Web Development & UI Design</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 3. FORM SECTION: Contact / Questions -->
+    <div class="container">
+        <h2>Ask Me a Question</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" placeholder="Your name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" placeholder="Your email address" required>
+            </div>
+            <div>
+                <label for="message">Question / Message:</label>
+                <textarea id="message" name="user_message" rows="4" placeholder="Ask a question about computer science, soccer, or anything else!" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="jorge.js"></script>
+
 </body>
 </html>
