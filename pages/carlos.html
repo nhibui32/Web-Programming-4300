@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Flores</title>
-</head>
-<body>
-    
-</body>
+
+<!-- Fig. 2.6: picture.html -->
+<!-- Including images in HTML5 files. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>This is me and my dog Tobi</title>
+      <link rel = "stylesheet" type = "text/css" href = "carlos.css">
+   </head>
+
+   <body>
+      <section>
+         <h1 class = "floated">My life with Tobi</h1>
+         <p>Tobi was born on on january 19, 2021 and will be 5 years old soon. He is a Labrador Retriever who is extremely energetic. He loves to eat any type of food and goes crazy for food. He enjoys walks, napping, tug of war, eating, and loves attention. He is a really good dog and he was pretty easy to train.  </p>
+      </section>
+
+      <h1>
+         Me and Tobi
+      </h1>
+      <p>
+My name is Carlos Flores and I am currently a senior working towards a Bachelors of Science in Computer Science at University of Houston Downtown. I am enrolled as full time student and planning to complete my degree in December 2027. I am pursuing a career as a web developer and currently looking to obtain an internship with a company. I am interested in joining a company’s web development team as a front end developer. I find my course in web development to be very interesting as it can teach me the skills towards the career I have chosen. On my free time I like to spend time with my dog Tobi. I like to be physically active with going to the gym, running, and playing sports as well. I am a big sports fan and enjoy watching sports and attending sporting events. My favorite sport is soccer, tennis, baseball, and basketball in that order. I enjoy hanging out with my friends and family. One of my favorite passions is to travel and learn new cultures across the world. I have traveled to El Salvador, Mexico, Brazil, France, Spain, Netherlands, Italy, and Greece. I plan to travel more around the world once I have the financial power of obtaining my career.
+      </p>
+
+      <p>
+         <!-- no class here, so this picture does NOT move -->
+         <img src = "../img/carlos-tobi.jpeg" width = "500" height = "500"
+              alt = "Tobi picture.jpeg">
+      </p>
+
+      <ul>
+         <li>Continents.
+            <!-- this starts a nested ordered list, which uses -->
+            <!-- numbers instead of bullets. The list ends when -->
+            <!-- you close the <ol> tag. -->
+            <ol>
+               <li> North America      </li>
+               <li> South America      </li>
+               <li> Europe             </li>
+               <li> Asia               </li>
+               <li> Africa             </li>
+               <li> Austrilia          </li>
+               <li> Antartica          </li>
+            </ol>
+         </li>
+      </ul>
+
+      <!-- class="pikachu" makes ONLY this image move -->
+      <img src = "../img/carlos-pikachu.gif" width = "138" height = "180"
+           alt = "This is pikachu running" class = "pikachu">
+      <div></div>
+
+      <!-- the <table> tag opens a table -->
+      <table border = "1">
+
+         <!-- the <caption> tag summarizes the table's -->
+         <!-- contents (this helps visually impaired people) -->
+         <caption><strong>European teams</strong></caption>
+
+         <!-- the <thead> section appears first in the table -->
+         <!-- it formats the table header area -->
+         <thead>
+            <tr> <!-- <tr> inserts a table row -->
+               <th>Team</th> <!-- insert a heading cell -->
+               <th>Champions League trophy</th>
+            </tr>
+         </thead>
+
+         <!-- the <tfoot> section appears last in the table -->
+         <!-- it formats the table footer -->
+         <tfoot>
+            <tr>
+               <td>Barcelona</td>
+               <td>5</td>
+            </tr>
+         </tfoot>
+
+         <!-- all table content is enclosed -->
+         <!-- within the <tbody> -->
+         <tbody>
+            <tr>
+               <td>Liverpool</td> <!-- insert a data cell -->
+               <td>6</td>
+            </tr>
+            <tr>
+               <td>AC Milan</td>
+               <td>7</td>
+            </tr>
+            <tr>
+               <td>Bayern</td>
+               <td>6</td>
+            </tr>
+         </tbody>
+      </table>
+
+      <script src = "carlos.js"></script>
+
+   </body>
 </html>

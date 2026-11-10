@@ -1,0 +1,57 @@
+body {
+   font-family: Verdana, sans-serif;
+   color: purple;
+}
+
+h1 {
+   font-family: Georgia, serif;
+   color: darkblue;
+}
+
+.floated {
+   background-color: lightBlue;
+   font-size: 1.5em;
+   font-family: verdana, helvetica, sans-serif;
+   padding: .2em;
+   margin-left: .5em;
+   margin-bottom: .5em;
+   float: right;
+   text-align: left;
+   width: 100%;
+}
+
+section {
+   border: 1px solid skyBlue;
+}
+
+/* only elements with class="pikachu" are animated */
+.pikachu {
+   position: relative;
+   -webkit-animation: movingimage linear 10s 1s 2 alternate;
+   -moz-animation: movingimage linear 10s 1s 2 alternate;
+   animation: movingimage linear 10s 1s 2 alternate;
+}
+
+@-webkit-keyframes movingimage {
+   0%   {opacity: 0; left: 50px; top: 0px;}
+   25%  {opacity: 1; left: 0px; top: 50px;}
+   50%  {opacity: 0; left: 50px; top: 100px;}
+   75%  {opacity: 1; left: 100px; top: 50px;}
+   100% {opacity: 0; left: 50px; top: 0px;}
+}
+
+@-moz-keyframes movingimage {
+   0%   {opacity: 0; left: 50px; top: 0px;}
+   25%  {opacity: 1; left: 0px; top: 50px;}
+   50%  {opacity: 0; left: 50px; top: 100px;}
+   75%  {opacity: 1; left: 100px; top: 50px;}
+   100% {opacity: 0; left: 50px; top: 0px;}
+}
+
+@keyframes movingimage {
+   0%   {opacity: 0; left: 50px; top: 0px;}
+   25%  {opacity: 1; left: 0px; top: 50px;}
+   50%  {opacity: 0; left: 50px; top: 100px;}
+   75%  {opacity: 1; left: 100px; top: 50px;}
+   100% {opacity: 0; left: 50px; top: 0px;}
+}
