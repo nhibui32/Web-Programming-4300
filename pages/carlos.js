@@ -11,14 +11,14 @@ while ( digitCounter <= 4 ) // loop 4 times, one digit each time
 {
    // prompt for input and read one digit from the user
    digit = window.prompt( "Create your 4 digit access code. Enter digit " +
-      digitCounter + " (or -1 to quit):", "0" );
+      digitCounter + " (or -1 to quit):", "" );
 
    // exit if user clicks Cancel or inputs -1
    if ( digit === null || digit == -1 )
       break;
 
    // only accept a single digit 0-9
-   if ( digit.length != 1 || isNaN( parseInt( digit ) ) )
+   if ( digit.length != 1 || !/^[0-9]$/.test( digit ) )
    {
       window.alert( "Please enter one digit from 0 to 9." );
       continue; // ask for the same digit again
