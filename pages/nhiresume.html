@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+</head>
+<style>
+    html{
+        height: 100%;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+    min-height: 100%;
+    background-color: #efe6d2;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    }
+    h1{
+        text-align: center;
+        margin-top: 10px;
+        color: #2b2118;
+    }
+    h2{
+        margin-top: 10px;
+        border-bottom: 1px solid #000;
+    }
+    h3{
+        margin-top: 10px;
+        color: #7a2e1d;
+    }
+    section{
+        margin-top: 10px;
+        margin-left: 20px
+    }
+    ul{
+        margin-left: 20px;
+    }
+    .split {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .split h3,
+    .split p {
+        margin-right: 10px;
+
+    }
+    .page {
+    max-width: 850px;
+    margin: 20px auto;             
+    padding: 24px 40px;            
+    border: 3px double #3b2a1a;     
+    background: rgba(241, 232, 208, 0.94);
+    box-shadow: 4px 4px 0 #2b2118;
+    min-height: 90vh;
+    }
+
+    @media (max-width: 600px) {
+    .page { padding: 16px; }
+    .split { flex-direction: column; }
+    }
+
+    @media (max-width: 600px) {
+    .page { padding: 16px; }
+    .split { flex-direction: column; }
+    }
+    
+</style>
+<body>
+    <div class="page">   
+    <h1>Ngoc Anh Nhi Bui</h1>
+    <div style="display:flex; justify-content: center; align-items: center; gap: 10px;">
+        <p>Email: <a href="mailto:buin3202@gmail.com">buin3202@gmail.com</a></p>
+        <p> |   Phone: +84 123 456 789</p>
+        <p> |   LinkedIn: <a href="https://www.linkedin.com/in/ngoc-anh-nhi-bui-0a1b0b1b0/" target="_blank">LinkedIn</a></p>
+    </div>
+    <section>
+        <h2>Certifications</h2>
+        <h3>Aws Certificated Practitioner</h3>
+        <p>Amazon Web Services(AWS)</p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="split">
+            <h3>University of Houston-Downtown</h3>
+            <p>Expected May 2027</p>
+        </div>
+        <div class="split">
+            <p>B.S. Computer Science - <strong>GPA: 3.67/4.0</strong></p>
+        <p>Houston, TX</p>
+        </div>
+        <ul>
+            <li>Relevant Coursework: Data Structures, Algorithms, Object-Oriented Programming, Database Systems, Web Programming,
+Programming Language Concept</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="split">
+            <h3>Kipp Public Schools</h3>
+            <p>May 2026 – Aug. 2026</p>
+        </div>
+        <div class="split">
+            <p>IT Operations Intern</p>
+            <p>Houston, TX</p>
+        </div>
+        <ul>
+            <li>Resolved an average of 10 support tickets per day as Tier-1 support for students and staff, diagnosing and repairing device hardware issues</li>
+            <li>Imaged, deployed, and managed 1,000+ Chromebooks across multiple campuses, handling provisioning, asset tracking, and device lifecycle management</li>
+            <li>Documented incidents and resolutions in the ticketing system following IT service management procedures, keeping repair history accurate</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <h3>Movie Success Prediction App</h3>
+        <p>Aug. 2025 – Nov. 2025</p>
+        <ul>
+            <li>Built Python application with role-based authentication and modular OOP architecture for the system</li>
+            <li>Implemented CSV-based persistent storage with error handling for ticket purchasing and transaction tracking</li>
+            <li>Applied data structures including dictionaries and lists for efficient data retrieval and search/filter functionality</li>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Languages: JavaScript, TypeScript, Python, C++, C#, SQL, HTML/CSS</li>
+            <li>Frameworks & Tools: React, Next.js, Node.js, Express, Tailwind CSS, MySQL, Power BI, Git, Linux, UnityL</li>
+            <li>Concepts: Data Structures & Algorithms, OOP, REST APIs, Agile, UI/UX, Database Design</li>
+        </ul>
+    </section>
+    </div>
+
+</body>
+</html>
