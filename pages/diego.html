@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <button id="surpriseBtn">Surprise me!</button>
+    <p id="surpriseText"></p>
+    <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+      background-color: #68660f;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: #273222;
+      }
+    }
+    </style>
+<body>
+
+    <style>
+    div {
+      background-color: red;
+      width: 300px;
+      border: 15px solid green;
+      padding: 50px;
+      margin: 20px;
+    }
+    </style>
+    
+<h1>My Personal Website</h1>
+<p style = "background-image: url('plaid.jpg'); color:#ccff00">My name is Diego Vazquez Sanchez, I am 22 years old and I am a student at the University of Houston - Downtown. My major is Computer Science and I need about a year left to graduate. I've been working for about a year at AutoZone. Whenever I graduate I would like to use my degree to apply for some web development job. A company like Google would be nice to work for. Right now I work as part-time since I'm still attending school full-time. My hobbies are playing video games and hanging out with friends. For video games, I am currently playing a lot of Sonic games. I also like to spend time listening to music and finding new songs to listen to. I own a dog named Smokey and he is currently 6 years old. I have 2 younger siblings, so that makes me the eldest. I've recently gone on trips out of state like Mexico and Chicago. It was my first time going to Chicago and I had the chance to go with my friends, so it was very fun. I visited Mexico for a party and also to visit my grandparents to see how they are doing. </p>
+
+<h3>A table showing concerts I've gone to</h3>
+<table style="width:100%">
+  <tr>
+    <th>Artist</th>
+    <th>Location</th>
+    <th>Genre</th>
+  </tr>
+  <tr>
+    <td>xaviersobased</td>
+    <td>White Oak Music Hall</td>
+    <td>Cloud Rap</td>
+  </tr>
+  <tr>
+    <td>Bladee</td>
+    <td>White Oak Music Hall - Lawn</td>
+    <td>Drain</td>
+  </tr>
+  <tr>
+    <td>Lucki</td>
+    <td>House of Blues</td>
+    <td>Rap</td>
+  </tr>
+</table>
+
+<img src="oshawott.jpg" alt="Oshawott" style="width:200px;height:300px;">
+    
+<a href="https://soundcloud.com/discover">Link to Soundcloud, which is the platform I use to discover new music!</a>
+
+
+
+<h3>Color Picker</h3>
+
+<form action="/action_page.php">
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="Submit">
+</form>
+
+<div>
+    <h3>An ordered list of my favorite video games!</h3>
+
+<ol>
+  <li>Pokemon</li>
+  <li>Sekiro</li>
+  <li>Terraria</li>
+  <li>Midnight Club 3</li>
+  <li>Super Smash Bros Ultimate</li>
+</ol>
+</div>
+<script>
+  const messages = [
+    "Gotta go fast! ",
+    "Smokey says woof! ",
+    "Oshawott used Water Gun! ",
+    "Now playing: something new from SoundCloud ",
+    "Chicago was a good trip! "
+  ];
+
+  document.getElementById("surpriseBtn").addEventListener("click", function () {
+    const pick = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("surpriseText").textContent = pick;
+  });
+</script>
+
+<style>
+  img {
+    transition: transform 0.6s;
+  }
+  img:hover {
+    transform: rotate(360deg);
+  }
+</style>
+
+</body>
+</html>
