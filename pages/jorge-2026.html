@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Celebrating 2026: Champions League Edition</title>
+    <link rel="stylesheet" href="jorge.css">
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <h1>Celebrating 2026: Champions League Edition</h1>
+
+    <label class="ios-toggle">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="toggle-track">
+            <span class="toggle-icon sun">☀</span>
+            <span class="toggle-icon moon">☾</span>
+        </span>
+        <span class="toggle-knob"></span>
+    </label>
+
+    <!-- Intro Section -->
+    <div class="container">
+        <p>
+            One of my favorite parts of 2026 has been following the UEFA Champions League. This page is my
+            personal celebration of the season so far: the teams I've been watching, where I think the
+            trophy is heading, and a spot for you to make your own prediction.
+        </p>
+        <p style="text-align: center;">
+            Back to <a href="jorge.html">my personal page</a> or <a href="../main.html">the group home page</a>.
+        </p>
+    </div>
+
+    <!-- LIST SECTION: Teams to Watch -->
+    <div class="container">
+        <h2>Teams I'm Watching This Year</h2>
+        <ul class="project-list">
+            <li><strong>Real Madrid:</strong> My favorite team, and the one I'm backing to lift the trophy again this year.</li>
+            <li><strong>AC Milan:</strong> Always fun to watch, never a boring match.</li>
+            <li><strong>Liverpool:</strong> Dangerous attack, could make a deep run.</li>
+            <li><strong>Bayern Munich:</strong> Consistent contenders every season.</li>
+        </ul>
+    </div>
+
+    <!-- TABLE SECTION: Predictions -->
+    <div class="container">
+        <h2>My 2026 Predictions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>My Pick</th>
+                    <th>Why</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Round of 16</td>
+                    <td>Real Madrid</td>
+                    <td>Strong squad depth heading into the knockouts.</td>
+                </tr>
+                <tr>
+                    <td>Quarterfinals</td>
+                    <td>Real Madrid</td>
+                    <td>Experience in big knockout matches.</td>
+                </tr>
+                <tr>
+                    <td>Semifinals</td>
+                    <td>Real Madrid</td>
+                    <td>History of coming through when it matters most.</td>
+                </tr>
+                <tr>
+                    <td>Final</td>
+                    <td>Real Madrid 🏆</td>
+                    <td>Because it's 2026 and I'm celebrating early.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><em>These are just my personal predictions, not official standings!</em></p>
+    </div>
+
+    <!-- FORM SECTION: Visitor Predictions -->
+    <div class="container">
+        <h2>Make Your Own Prediction</h2>
+        <form id="prediction-form">
+            <div>
+                <label for="pred-name">Name:</label>
+                <input type="text" id="pred-name" name="user_name" placeholder="Your name" required>
+            </div>
+            <div>
+                <label for="pred-team">Who wins the Champions League in 2026?</label>
+                <input type="text" id="pred-team" name="predicted_team" placeholder="Your pick" required>
+            </div>
+            <div>
+                <label for="pred-reason">Why?</label>
+                <textarea id="pred-reason" name="reason" rows="3" placeholder="Make your case!"></textarea>
+            </div>
+            <button type="submit">Submit Prediction</button>
+        </form>
+        <p id="prediction-response" style="text-align: center; font-weight: bold; display: none;"></p>
+    </div>
+
+    <script src="jorge.js"></script>
+    <script>
+        (function () {
+            const form = document.getElementById('prediction-form');
+            const response = document.getElementById('prediction-response');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const name = document.getElementById('pred-name').value;
+                const team = document.getElementById('pred-team').value;
+                response.textContent = `Thanks, ${name}! Your pick for ${team} has been noted.`;
+                response.style.display = 'block';
+                form.reset();
+            });
+        })();
+    </script>
+
+</body>
+</html>
