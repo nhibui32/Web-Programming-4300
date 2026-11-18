@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheers to 2026</title>
+  <link rel="stylesheet" href="diego.css">
+  <script src="diego.js" defer></script>
+</head>
+<body>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <p class="eyebrow">Our year in review</p>
+  <h1>Cheers to <span class="year">2026</span></h1>
+  <p class="tagline">A year of friendship, growth, and getting things done, together.</p>
+  <button id="celebrateBtn" type="button">Celebrate!</button>
+</header>
+
+<nav class="topnav">
+  <a href="#team">Meet the Team</a>
+  <a href="#highlights">2026 Highlights</a>
+  <a href="#thanks">Thank You</a>
+</nav>
+
+<main>
+
+  <!-- ===== GROUP MEMBERS ===== -->
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <p class="section-intro">Click a card to visit each member's personal page from the semester.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="avatar">D</div>
+        <h3>Diego Vazquez Sanchez</h3>
+        <p class="role">Computer Science, University of Houston - Downtown</p>
+        <p>Future web developer who loves video games, discovering new music, and hanging out with friends. Dog dad to Smokey.</p>
+        <a class="btn" href="pages/diego.html">Visit Diego's page</a>
+      </article>
+
+      <article class="card">
+        <div class="avatar">C</div>
+        <h3>Carlos Flores</h3>
+        <p class="role">Senior, Computer Science, University of Houston - Downtown</p>
+        <p>Aspiring front-end developer who loves soccer, the gym, and traveling the world. Dog dad to Tobi.</p>
+        <a class="btn" href="pages/carlos.html">Visit Carlos's page</a>
+      </article>
+
+      <article class="card">
+        <div class="avatar">N</div>
+        <h3>Nhi Bui</h3>
+        <p class="role">Final-year student, University of Houston - Downtown</p>
+        <p>Coffee-powered coder working with Python, SQL, and React. Loves movies and dramas, and graduates in May.</p>
+        <a class="btn" href="pages/nhi.html">Visit Nhi's page</a>
+      </article>
+
+      <article class="card">
+        <div class="avatar">J</div>
+        <h3>Jorge Morin</h3>
+        <p class="role">Senior, Computer Science</p>
+        <p>Coffee-fueled developer who loves hiking, reading, and programming. Dog dad to Zachary and a die-hard Real Madrid fan.</p>
+        <a class="btn" href="pages/jorge.html">Visit Jorge's page</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 2026 HIGHLIGHTS ===== -->
+  <section id="highlights">
+    <h2>2026 Highlights</h2>
+    <p class="section-intro">Moments, wins, and memories from our year.</p>
+
+    <ol class="timeline">
+      <li>
+        <span class="when">Jan 2026</span>
+        <div>
+          <h3>Starting the year</h3>
+          <p>I started reading manga like Tokyo Ghoul and also went to museum exhibits in Asia Society Texas and MFAH.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Spring 2026</span>
+        <div>
+          <h3>An achievement</h3>
+          <p>I got confirmed in the Co-Cathedral of the Sacred Heart and I also bought a bicycle to be active.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Summer 2026</span>
+        <div>
+          <h3>Friendship moment</h3>
+          <p>Me and my friends started going to different clubs, going to the beach and we even planned a trip to Chicago.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Fall 2026</span>
+        <div>
+          <h3>Ending the year</h3>
+          <p>Me and family visit my family in Mexico once a year towards the end so we visited them in Guerrero. We also went to Puebla to celebrate a quinceañera.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===== CLICK COUNTER / FUN FACT ===== -->
+  <section id="thanks">
+    <h2>Thank You, 2026</h2>
+    <p class="section-intro">Click the button for a memory from 2026.</p>
+    <button id="memoryBtn" type="button">Show a memory</button>
+    <p id="memoryText" class="memory" aria-live="polite"></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Made with teamwork in 2026 &middot; University of Houston - Downtown</p>
+</footer>
+
+</body>
+</html>
